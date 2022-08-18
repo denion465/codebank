@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import {
@@ -12,8 +13,8 @@ import {
   Typography
 } from '@material-ui/core';
 import axios from 'axios';
-import { http } from '../../http';
-import { Product } from '../../model';
+import { http } from '../../../http';
+import { Product } from '../../../model';
 
 interface ProductDetailPageProps {
   product: Product;
@@ -38,9 +39,15 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
         />
       </Card>
       <CardActions>
-        <Button size="small" color="primary" component="a">
-          Comprar
-        </Button>
+        <Link
+          href="/products/slug/order"
+          as={`/products/${product.slug}/order`}
+          passHref
+        >
+          <Button size="small" color="primary" component="a">
+            Comprar
+          </Button>
+        </Link>
       </CardActions>
       <CardMedia style={{ paddingTop: '56%' }} image={product.image_url} />
       <CardContent>
