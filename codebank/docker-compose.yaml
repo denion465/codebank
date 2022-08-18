@@ -14,7 +14,7 @@ services:
   db:
     image: postgres:9.4
     restart: always
-    tty: true
+    tty: false
     volumes:
       - .pgdata:/var/lib/postgresql/data
     environment:
