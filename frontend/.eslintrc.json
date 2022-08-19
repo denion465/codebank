@@ -24,6 +24,7 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/naming-convention": "off",
     "prettier/prettier": [
       "error",
       {
