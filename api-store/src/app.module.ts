@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { ProductsModule } from './products/products.module';
+import { OrdersModule } from './orders/orders.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { ProductsModule } from './products/products.module';
       entities: [process.env.TYPEORM_ENTITIES],
     }),
     ProductsModule,
+    OrdersModule,
   ],
   controllers: [],
   providers: [],

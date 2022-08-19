@@ -42,15 +42,15 @@ Content-Type: application/json
 {
     "credit_card": {
       "number": "1111111111111103",
-      "name": "Luiz carlos",
-      "expiration_month": 7,
-      "expiration_year": 2021,
+      "name": "Daniel Vidal",
+      "expiration_month": 8,
+      "expiration_year": 2022,
       "cvv": "123"
     },
        "items":  [
       {
           "quantity": 2,
-          "product_id": "fa1198b0-4a38-4f04-8845-8c88b91f28ec"
+          "product_id": "2f09ba05-372b-4f45-ae64-58929dfeafc1"
       }
    ]
 }
