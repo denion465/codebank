@@ -8,6 +8,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 RUN npm install -g @nestjs/cli@9.0.0
+RUN npm install -g ntl
 
 USER node
 
