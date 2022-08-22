@@ -16,14 +16,23 @@ services:
 
   db:
     build: .docker/postgres
-    container_name: db-store-imersao09
     restart: always
     tty: true
     volumes:
-      - .docker/dbdata:/var/lib/postgresql/data
+      - ./.docker/dbdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=store-imersao09
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=store
+    # ports:
+    #  - 5432:5432
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: store-api-pgadmin
+    tty: true
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@user.com
+      - PGADMIN_DEFAULT_PASSWORD=123456
     ports:
-      - "5432:5432"
+      - 9000:80
