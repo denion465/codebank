@@ -1,6 +1,9 @@
 GET http://localhost:3000/products
 
 ###
+GET http://localhost:3000/orders
+
+###
 GET http://localhost:3000/products/ce322a8c-b314-4471-97b2-7980b281376e
 
 ###
@@ -50,7 +53,7 @@ Content-Type: application/json
        "items":  [
       {
           "quantity": 2,
-          "product_id": "2f09ba05-372b-4f45-ae64-58929dfeafc1"
+          "product_id": "9c79e180-4ad2-4772-93e1-3d073ce99141"
       }
    ]
 }
